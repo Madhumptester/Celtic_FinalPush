@@ -748,6 +748,7 @@ public class RWC003 extends DriverFactory {
 
 		for (int weightcount = 0; weightcount < Integer.valueOf(weightGroupCountExcel); weightcount++) {
 			if (weightcount < Integer.valueOf(weightGroupCountExcel)) {
+				Thread.sleep(2000);
 				wgtgroup.clickAddWeightGroup();
 				logger.setLoggerInfo("*** Click AddweightGroup ***");
 				screenshotUtil.captureScreenshot(className, "Click AddweightGroup");
@@ -790,7 +791,7 @@ public class RWC003 extends DriverFactory {
 	public void existingWeightAmendment() throws Exception {
 		try {
 			if(commonobjects.fetchHeaderRow().trim().equalsIgnoreCase("Weight Group Selection Details")) {
-
+Thread.sleep(2000);
 		wgtgroup.clickHandImg();
 
 		String juriExcelCount = excelutil.getCellData("WeightJuris", "Juris Count", readRowNo);
